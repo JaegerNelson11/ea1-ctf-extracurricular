@@ -3,7 +3,7 @@
 ## Overview
 This repository contains the deliverable for Extracurricular Assignment 01 (EA-1). The chosen activity was participating in **picoCTF**, a cybersecurity Capture The Flag platform. 
 
-Specifically, this repository documents the analysis and solution for two challenges: **Riddle Registry** (Digital Forensics) and **Log Hunt** (General Skills).
+Specifically, this repository documents the analysis and solution for three challenges: **Riddle Registry** (Digital Forensics), **Log Hunt** (General Skills), and **Hidden in plainsight** (Forensics / Steganography).
 
 ## Deliverable Information
 * **Activity:** picoCTF
@@ -11,11 +11,14 @@ Specifically, this repository documents the analysis and solution for two challe
     * **Objective:** Extract a hidden, encoded flag from a provided PDF document (confidential.pdf).
 * **Challenge 2:** Log Hunt (General Skills)
     * **Objective:** Reconstruct a secret flag from scattered fragments leaked inside a server log file.
+* **Challenge 3:** Hidden in plainsight (Forensics / Steganography)
+    * **Objective:** Discover a hidden payload tucked away inside a seemingly ordinary JPG image and extract the flag.
 
 ## Repository Contents
 * challenges/riddle-registry/: Contains the target PDF file and a detailed solution-notes.md write-up.
 * challenges/log-hunt/: Contains the target server log file and a detailed solution-notes.md write-up.
-* assets/: Contains proof of participation and successful completion screenshots for both challenges.
+* challenges/hidden-in-plainsight/: Contains the target JPG file, the extracted flag.txt, and a detailed solution-notes.md write-up.
+* assets/: Contains proof of participation and successful completion screenshots for all challenges.
 * Reflection.md: A critical reflection on the activity, technical decisions, and connections to computer science concepts.
 
 ## Instructions to Reproduce
@@ -28,6 +31,10 @@ To view the technical solution process:
 ### Log Hunt
 1. Navigate to the challenges/log-hunt/ directory.
 2. Review the solution-notes.md file for the command-line workflow (grep) used to parse the server log and reconstruct the flag fragments.
+
+### Hidden in plainsight
+1. Navigate to the challenges/hidden-in-plainsight/ directory.
+2. Review the solution-notes.md file for the command-line workflow (binwalk, exiftool, base64, steghide) used to discover the hidden payload, decode the extraction password, and extract the final text file from the image.
 
 ---
 
@@ -62,6 +69,24 @@ Below is the evidence of successful participation and completion of the Log Hunt
 
 **3. Challenge Solved:**
 ![Log Hunt Complete](./assets/Log-Hunt-Complete.png)
+
+### Challenge 3: Hidden in plainsight
+Below is the evidence of successful participation and completion of the Hidden in plainsight challenge:
+
+**1. Problem Description:**
+![Hidden in plainsight Problem Description](./assets/Hidden-In-Plainsight-Problem-Desc.png)
+
+**2. Finding the Secret Comment:**
+![Finding the Secret Comment](./assets/Hidden-in-plainsight-found-secret-comment.png)
+
+**3. Decrypting the Password and Extracting Data:**
+![Decrypting the Password and Extracting Data](./assets/Hidden-in-plainsight-Decrypt-and-use-password.png)
+
+**4. Viewing the Extracted Flag:**
+![Viewing the Extracted Flag](./assets/Hidden-in-plainsight-flag.text.png)
+
+**5. Challenge Solved:**
+![Hidden in plainsight Complete](./assets/Hidden-in-plainsight-complete.png)
 
 ---
 
